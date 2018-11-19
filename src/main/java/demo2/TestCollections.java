@@ -1,11 +1,9 @@
 package demo2;
 
-public class Test {
+public class TestCollections {
 
     public static void main(String[] args) {
 
-    }
-    //bla bla bla
-}
 
-//RaceCondition123$
+    }
+}
