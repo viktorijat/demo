@@ -1,0 +1,15 @@
+{
+  "uniqueKey": "6305_630520_WON_LOST",
+  "id": "a768af26-7c76-4b2c-aaa9-8580bc6b05e8",
+  "type": "BETSLIP_SETTLEMENT",
+  "timestamp": "2018-10-19T17:15:23Z",
+  "originService": "www01",
+  "originVersion": "v5.120.4b273",
+  "customerId": 7420,
+  "tipicoCustomerId": "d4b966dc-55cf-4a7c-a300-e1bcb35d4806",
+  "betslipId": 630520,
+  "betslipStatus": "PAID_OUT",
+  "betslipStake": 10.0,
+  "betslipPrize": 40.0,
+  "eventIds": "[227151710]"
+}
