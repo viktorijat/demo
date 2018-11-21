@@ -11,7 +11,16 @@ public class Times {
     public static void main(String[] args) {
 
         //test1();
-        test2();
+        //test2();
+        question42();
+    }
+
+    private static void question42() {
+        LocalDate date = LocalDate.of(2012, 01, 32);
+        date.plusDays(10);
+        System.out.println(date);
+
+        // Exception in thread "main" java.time.DateTimeException: Invalid value for DayOfMonth (valid values 1 - 28/31): 32
     }
 
     private static void test2() {
