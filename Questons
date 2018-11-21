@@ -3,3 +3,20 @@
 
 148. Which statement is true about java.time.Duration?
 - It defines time-based values
+
+132: You want to create a singleton class by using the Singleton design pattern. Which two statements enforce the singleton nature of the design?
+- make the class static
+- make the constructor provate
+
+129: Which statement is true about java.util.stream.Stream?
+- The execution mode of streams can be changed during processing.
+
+128: Which two statements are true about localizing an application?
+- Support for new regional languages does not require recompilation of the code.
+- Language codes use lowercase letters and region codes use uppercase letters.
+
+125: Which statement is true about the DriverManager class?
+- It returns an instance of Connection.
+
+124: Which statement is true about the single abstract method of the java.util.function.Function interface?
+- It accepts one argument and always produces a result of the same type as the argument.

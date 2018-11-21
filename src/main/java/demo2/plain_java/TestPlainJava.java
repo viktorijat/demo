@@ -2,7 +2,9 @@ package demo2.plain_java;
 
 import demo2.plain_java.question29.Shirt;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.function.Function;
 
 public class TestPlainJava {
 
@@ -13,7 +15,7 @@ public class TestPlainJava {
         //question42();
         //question48();
         //question49();
-        question50();
+        //question50();
     }
 
     private static void question50() {

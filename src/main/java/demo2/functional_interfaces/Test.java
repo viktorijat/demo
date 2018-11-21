@@ -1,6 +1,7 @@
 package demo2.functional_interfaces;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.BiFunction;
 import java.util.function.UnaryOperator;
@@ -9,9 +10,30 @@ public class Test {
 
     public static void main(String[] args) {
 
-        question147();
-        question149();
+        //question147();
+        //question149();
+        //question134();
+        question126();
+    }
 
+    private static void question126() {
+        List<Integer> nums = Arrays.asList(10, 20, 8);
+        System.out.println(
+                //line n1
+                nums.stream().max(Comparator.comparing(a -> a)).get()
+        );
+
+        // 20
+    }
+
+    private static void question134() {
+        List<Integer> codes = Arrays.asList(10, 20);
+        // UnaryOperator<Double> uo = s -> s + 10.0;
+        // taka si bese, zznaci compiler error
+        UnaryOperator<Integer> uo2 = s -> s + 10;
+        //codes.replaceAll(uo); // tuka compiler error
+        codes.replaceAll(uo2); // 20 30
+        codes.forEach(System.out::println);
     }
 
     private static void question147() {
