@@ -1,0 +1,5 @@
+145. For which three objects must a vendor provide implementations in its JDBC driver?
+- Statement, ResultSet, Connection
+
+148. Which statement is true about java.time.Duration?
+- It defines time-based values
