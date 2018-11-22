@@ -20,3 +20,6 @@
 
 124: Which statement is true about the single abstract method of the java.util.function.Function interface?
 - It accepts one argument and always produces a result of the same type as the argument.
+
+100: Which action can be used to load a database driver by using JDBC3.0?
+- Use the DriverManager.getDriver method to load the driver class.
