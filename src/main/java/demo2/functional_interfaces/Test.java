@@ -3,7 +3,7 @@ package demo2.functional_interfaces;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-import java.util.function.BiFunction;
+import java.util.function.Predicate;
 import java.util.function.UnaryOperator;
 
 public class Test {
@@ -13,7 +13,46 @@ public class Test {
         //question147();
         //question149();
         //question134();
-        question126();
+        //question126();
+        //question122();
+        //question121();
+        question118();
+    }
+
+    private static void question118() {
+        List<String> listVal = Arrays.asList("Joe", "Paul", "Alice", "Tom");
+        System.out.println(
+                // line n1
+                listVal.stream().filter(x -> x.length() > 3).count()
+        );
+    }
+
+    private static void question121() {
+
+        List<String> str = Arrays.asList("my", "pen", "is", "your", "pen");
+
+        Predicate<String> test = s -> {
+            int i = 0;
+            boolean result = s.contains("pen");
+            System.out.print(i++ + ":");
+            return result;
+        };
+
+        //str.stream().filter(test).findFirst().isPresent(System.out::print);
+
+        // compilation error occurs
+    }
+
+    private static void question122() {
+        List<String> empDetails = Arrays.asList("100, Robin, HR",
+                "200, Mary, AdminServices", "101, Peter, HR");
+
+        empDetails.stream().filter(s -> s.contains("1")).sorted()
+                .forEach(System.out::println); // line n1
+
+
+        // 100, Robin, HR
+        // 101, Peter, HR
     }
 
     private static void question126() {
@@ -28,7 +67,7 @@ public class Test {
 
     private static void question134() {
         List<Integer> codes = Arrays.asList(10, 20);
-        // UnaryOperator<Double> uo = s -> s + 10.0;
+         UnaryOperator<Double> uo = s -> s + 10.0;
         // taka si bese, zznaci compiler error
         UnaryOperator<Integer> uo2 = s -> s + 10;
         //codes.replaceAll(uo); // tuka compiler error
