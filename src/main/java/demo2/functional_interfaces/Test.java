@@ -5,6 +5,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.function.UnaryOperator;
+import java.util.stream.Stream;
 
 public class Test {
 
@@ -16,7 +17,16 @@ public class Test {
         //question126();
         //question122();
         //question121();
-        question118();
+        //question118();
+        question92();
+    }
+
+    private static void question92() {
+        Stream<List<String>> iStr = Stream.of(
+                Arrays.asList("1", "John"),
+                Arrays.asList("2", null));
+        Stream<String> nInSt = iStr.flatMap((x) -> x.stream());
+        nInSt.forEach(System.out::println);
     }
 
     private static void question118() {
