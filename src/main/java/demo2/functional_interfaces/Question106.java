@@ -27,5 +27,7 @@ public class Question106 {
         long c = strs.stream().filter(cf1).filter(cf2).count();
 
         System.out.println(c);
+
+        // 3
     }
 }
