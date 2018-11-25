@@ -8,6 +8,7 @@ import java.util.function.IntUnaryOperator;
 import java.util.function.Predicate;
 import java.util.function.UnaryOperator;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class Test {
 
@@ -20,6 +21,7 @@ public class Test {
         //question122();
         //question121();
         //question118();
+        //question92();
         //question84();
         question83();
     }
@@ -39,6 +41,14 @@ public class Test {
                 .map(n -> n * 2) // line n1
                 .peek(System.out::print) // line n2
                 .count();
+    }
+
+    private static void question92() {
+        Stream<List<String>> iStr = Stream.of(
+                Arrays.asList("1", "John"),
+                Arrays.asList("2", null));
+        Stream<String> nInSt = iStr.flatMap((x) -> x.stream());
+        nInSt.forEach(System.out::println);
     }
 
     private static void question118() {
