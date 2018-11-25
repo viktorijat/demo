@@ -1,10 +1,7 @@
 package demo2.plain_java;
 
-import demo2.plain_java.question29.Shirt;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 public class TestPlainJava {
 
@@ -16,6 +13,36 @@ public class TestPlainJava {
         //question48();
         //question49();
         //question50();
+        //question81();
+        question78();
+    }
+
+    private static void question78() {
+        String ta = "A ";
+        ta = ta.concat("B ");
+        String tb = "C ";
+        System.out.println("1 " + ta);
+        ta = ta.concat(tb);
+        System.out.println("2 " + ta);
+        ta.replace('C', 'D');
+        ta = ta.concat(tb);
+        System.out.println("3 " + ta);
+    }
+
+    private static void question81() {
+        String[][] shirts = new String[2][2];
+        shirts[0][0] = "red";
+        shirts[0][1] = "blue";
+        shirts[1][0] = "small";
+        shirts[1][1] = "medium";
+
+        for (int index = 0; index < 2; ) {
+            for (int idx = 0; idx < 2; ) {
+                System.out.print(shirts[index][idx] + ":");
+                idx++;
+            }
+            index++;
+        }
     }
 
     private static void question50() {
@@ -42,7 +69,7 @@ public class TestPlainJava {
             System.out.println(x + " - " + y);
             System.out.println("Welcome");
         }
-        System.out.println("Log " + x + ":" +  y);
+        System.out.println("Log " + x + ":" + y);
 
 
 //        Welcome

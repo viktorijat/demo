@@ -3,8 +3,11 @@ package demo2.functional_interfaces;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.IntFunction;
+import java.util.function.IntUnaryOperator;
 import java.util.function.Predicate;
 import java.util.function.UnaryOperator;
+import java.util.stream.IntStream;
 
 public class Test {
 
@@ -16,7 +19,26 @@ public class Test {
         //question126();
         //question122();
         //question121();
-        question118();
+        //question118();
+        //question84();
+        question83();
+    }
+
+    private static void question83() {
+        IntStream stream = IntStream.of(1, 2, 3);
+        IntFunction<IntUnaryOperator> inFu = x -> y -> x * y; // line n1
+        IntStream newStream = stream.map(inFu.apply(10));
+        newStream.forEach(System.out::print);
+
+
+    }
+
+    private static void question84() {
+        List<Integer> values = Arrays.asList(1, 2, 3);
+        values.stream()
+                .map(n -> n * 2) // line n1
+                .peek(System.out::print) // line n2
+                .count();
     }
 
     private static void question118() {

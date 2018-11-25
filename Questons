@@ -23,3 +23,17 @@
 
 100: Which action can be used to load a database driver by using JDBC3.0?
 - Use the DriverManager.getDriver method to load the driver class.
+
+86: Which two reasons should you use interfaces instead of abstract class?
+- You expect that classes that implement your interfaces have many common methods or fields, or require access modifiers other than public.
+- You want to take advantage of multiple inheritance of type.
+
+68: Which are three are advantages of the Java exception mechanism?
+- Improves the program structure because the programmer can choose where to handle exceptions
+- Improves the program structure because the error handling code is separated from the normal program function
+- Allows the creation of new exceptions that are tailored to the particular program being created
+
+64: Which three statements describe the object-oriented features of the Java language?
+- Objects can share behaviors with other objects
+- Object is the root class of all other objects
+- A subclass can inherit from a superclass

@@ -1,7 +1,5 @@
 package demo2.plain_java;
 
-import java.util.Comparator;
-
 class Book {
 
     String name;
@@ -27,8 +25,8 @@ class Book {
 public class Question98 {
 
     public static void main(String[] args) {
-        Book b1 = new Book (101, "Java Programing");
-        Book b2 = new Book (102, "Java Programing");
+        Book b1 = new Book(101, "Java Programing");
+        Book b2 = new Book(102, "Java Programing");
         System.out.println(b1.equals(b2));
         // true
     }
