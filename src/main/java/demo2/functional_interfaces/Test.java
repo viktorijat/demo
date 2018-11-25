@@ -1,12 +1,11 @@
 package demo2.functional_interfaces;
 
+import demo2.Doable_vezba.Do;
+
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-import java.util.function.IntFunction;
-import java.util.function.IntUnaryOperator;
-import java.util.function.Predicate;
-import java.util.function.UnaryOperator;
+import java.util.function.*;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -15,7 +14,7 @@ public class Test {
     public static void main(String[] args) {
 
         //question147();
-        //question149();
+        question149();
         //question134();
         //question126();
         //question122();
@@ -23,7 +22,7 @@ public class Test {
         //question118();
         //question92();
         //question84();
-        question83();
+        //question83();
     }
 
     private static void question83() {
@@ -118,7 +117,7 @@ public class Test {
         List<Double> loanValues = Arrays.asList(1000.0, 2000.0);
         loanValues.stream()
                 .filter(lv -> lv >= 1500)
-                // .map(lv -> uo1.apply(lv)) // compiler error
+                //.map(lv -> uo1.apply(lv)) // compiler error
                 .forEach(s -> System.out.println(s + " "));
     }
 }
