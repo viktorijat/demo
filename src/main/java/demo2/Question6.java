@@ -7,8 +7,7 @@ class Book {
     }
 }
 
-public class EBook extends Book {
-
+public class Question6 extends Book {
     public void read(String url) {
         System.out.println("View " + url);
     }
@@ -20,7 +19,7 @@ class Test {
     public static void main(String[] args) {
         Book b1 = new Book();
         b1.read("Java Programing");
-        Book b2 = new EBook();
+        Book b2 = new Question6();
         b2.read("http://wfade");
     }
 }

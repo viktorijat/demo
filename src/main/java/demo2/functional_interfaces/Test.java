@@ -1,7 +1,4 @@
 package demo2.functional_interfaces;
-
-import demo2.Doable_vezba.Do;
-
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;

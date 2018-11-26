@@ -4,12 +4,10 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class TestBufferedReader {
+public class Question5 {
 
     public static void main(String[] args) throws IOException {
-
         test1();
-
     }
 
     private static void test1() throws IOException {

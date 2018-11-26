@@ -3,7 +3,7 @@ package demo2;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class TestPaths {
+public class Question8 {
 
     public static void main(String[] args) {
         test1();

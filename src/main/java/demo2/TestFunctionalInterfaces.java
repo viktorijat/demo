@@ -9,10 +9,10 @@ import java.util.function.ToIntFunction;
 public class TestFunctionalInterfaces {
 
     public static void main(String[] args) {
-        //test1();
+        question9();
         //question139();
         //question140();
-        question138();
+        //question138();
     }
 
     private static void question138() {
@@ -44,7 +44,7 @@ public class TestFunctionalInterfaces {
         //peek ne e finalna operacija, nisto ne printa
     }
 
-    private static void test1() {
+    private static void question9() {
 
         List<String> colors = Arrays.asList("red", "green", "yellow");
 

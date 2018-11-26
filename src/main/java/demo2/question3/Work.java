@@ -1,4 +1,4 @@
-package demo2.Doable_vezba;
+package demo2.question3;
 
 public abstract class Work implements Doable {
 

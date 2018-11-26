@@ -21,3 +21,6 @@ public class App {
         t.doRegister("Matthew", 60);
     }
 }
+//    Exception in thread "main" demo2.exceptions.AgeOutOfLimitException
+//        at demo2.exceptions.App.doRegister(App.java:13)
+//        at demo2.exceptions.App.main(App.java:21)
