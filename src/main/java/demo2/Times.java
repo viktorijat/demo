@@ -11,9 +11,9 @@ public class Times {
 
     public static void main(String[] args) {
 
-        question9();
-        //test2();
-        //question42();
+        //question9();
+        //question20();
+        question42();
         //question146();
     }
 
@@ -35,7 +35,7 @@ public class Times {
         // Exception in thread "main" java.time.DateTimeException: Invalid value for DayOfMonth (valid values 1 - 28/31): 32
     }
 
-    private static void test2() {
+    private static void question20() {
         String date = LocalDate.parse("2014-05-04").format(DateTimeFormatter.ISO_DATE_TIME);
         System.out.println(date);
 

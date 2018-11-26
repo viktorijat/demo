@@ -14,7 +14,7 @@ public class Question51 {
         Question51 ex = new Question51();
         int cardNo = 12344;
         ex.checkCard(cardNo); // line n1
-        // ex.readCard(cardNo); // line n2
+        //ex.readCard(cardNo); // line n2
         // line n2 compilation fails throws exception
     }
 }

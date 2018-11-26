@@ -9,11 +9,13 @@ class X {
     }
 }
 
-public class TestX {
+public class Question15 {
 
     //public static void main(String[] args) {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
         X xobj = new X();
+
         xobj.printFileContent();
+
     }
 }

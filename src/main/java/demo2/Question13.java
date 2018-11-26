@@ -13,15 +13,15 @@ class Vehicle {
 
 }
 
-public class Car extends Vehicle {
+public class Question13 extends Vehicle {
     int y;
 
-    Car() {
+    Question13() {
         super();
         //this(20); // line n2 compilation error
     }
 
-    Car(int y) {
+    Question13(int y) {
         this.y = y;
     }
 
@@ -31,7 +31,7 @@ public class Car extends Vehicle {
     }
 
     public static void main(String[] args) {
-        Vehicle y = new Car();
+        Vehicle y = new Question13();
         System.out.println(y);
     }
 }

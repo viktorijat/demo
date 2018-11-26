@@ -2,7 +2,7 @@ package demo2.plain_java;
 
 public class Question30 {
 
-    private static int findMax(int[] numbers) { // signature
+    static int findMax(int[] numbers) { // signature
         int max = 0;
 
         return max;

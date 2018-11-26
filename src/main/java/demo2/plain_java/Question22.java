@@ -1,12 +1,12 @@
 package demo2.plain_java;
 
-public class Question22Employee {
+public class Question22 {
 
     String name;
     boolean contract;
     double salary;
 
-    Question22Employee() {
+    Question22() {
         //line n1
         this.name = new String("Joe");
         this.contract = new Boolean(true);
@@ -18,7 +18,7 @@ public class Question22Employee {
     }
 
     public static void main(String[] args) {
-        Question22Employee e = new Question22Employee();
+        Question22 e = new Question22();
 
         //line n2
         e.name = "Joe";

@@ -6,11 +6,11 @@ public class Question28 {
         int iVar = 100;
         float fVar = 100.100f;
         double dVar = 123;
-        // iVar = fVar; // int -float
+        //iVar = fVar; // int -float
         fVar = iVar;
         dVar = fVar;
-        // fVar = dVar; // float - double
+        //fVar = dVar; // float - double
         dVar = iVar;
-        // iVar = dVar; // int -double
+        //iVar = dVar; // int -double
     }
 }

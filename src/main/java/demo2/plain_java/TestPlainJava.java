@@ -6,15 +6,15 @@ import java.util.List;
 public class TestPlainJava {
 
     public static void main(String[] args) {
-        //test1();
-        //test2();
-        //test3();
-        //question42();
+        //question14();
+        //question16();
+        //question19();
+        //question41();
         //question48();
         //question49();
-        //question50();
+        question50();
         //question81();
-        question78();
+        //question78();
     }
 
     private static void question78() {
@@ -64,12 +64,11 @@ public class TestPlainJava {
         int x = 1;
         int y = 0;
         if (x++ > ++y) {
-            System.out.println("Hello");
+            System.out.print("Hello");
         } else {
-            System.out.println(x + " - " + y);
-            System.out.println("Welcome");
+            System.out.print("Welcome");
         }
-        System.out.println("Log " + x + ":" + y);
+        System.out.print(" Log " + x + ":" + y);
 
 
 //        Welcome
@@ -80,11 +79,11 @@ public class TestPlainJava {
         Short s1 = 200;
         Integer s2 = 400;
         Long s3 = (long) s1 + s2; // line n1
-        // String s4 = (String) (s3 * s2); // line n2
+        //String s4 = (String) (s3 * s2); // line n2
         // compilation fails Inconvertible types; cannot cast 'long' to 'java.lang.String'
     }
 
-    private static void question42() {
+    private static void question41() {
 
         List colors = new ArrayList();
         colors.add("green");
@@ -98,12 +97,12 @@ public class TestPlainJava {
         // [green, red, yellow, cyan]
     }
 
-    private static void test3() {
+    private static void question19() {
 
         String[] arr = {"A", "B", "C", "D"};
 
         for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] = " ");
+            System.out.print(arr[i] + " ");
             if (arr[i].equals("C")) {
                 continue;
             }
@@ -114,7 +113,7 @@ public class TestPlainJava {
         // A work done
     }
 
-    private static void test2() {
+    private static void question16() {
 
         int[] array = new int[2];
         array[0] = 10;
@@ -123,10 +122,14 @@ public class TestPlainJava {
 
     }
 
-    private static void test1() {
+    private static void question14() {
+
         StringBuilder sb1 = new StringBuilder("Duke");
+
         String str1 = sb1.toString();
+
         String str2 = str1;
+
         System.out.println(str1 == str2);
     }
 }
