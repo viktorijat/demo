@@ -1,13 +1,13 @@
 ----------------------------------------------------------------
-Tue Sep 25 16:50:53 CEST 2018:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.3.0 - (1405108): instance a816c00e-0166-1136-26b6-00000e23be20 
-on database directory /Users/toshevav/Downloads/demo/zad1  with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
+Thu Nov 29 15:13:42 CET 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.3.0 - (1405108): instance a816c00e-0167-5fd1-787e-00000e22dc50 
+on database directory /Users/toshevav/Downloads/demo/question136  with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
 Loaded from file:/Users/toshevav/.m2/repository/org/apache/derby/derby/10.8.3.0/derby-10.8.3.0.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_92-b14
 user.dir=/Users/toshevav/Downloads/demo
 os.name=Mac OS X
 os.arch=x86_64
-os.version=10.13.6
+os.version=10.14
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''

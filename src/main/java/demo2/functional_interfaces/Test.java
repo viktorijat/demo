@@ -94,13 +94,22 @@ public class Test {
     }
 
     private static void question134() {
+
         List<Integer> codes = Arrays.asList(10, 20);
          UnaryOperator<Double> uo = s -> s + 10.0;
         // taka si bese, zznaci compiler error
-        UnaryOperator<Integer> uo2 = s -> s + 10;
+        UnaryOperator<Integer> uo2 = s -> s + 10; //UnaryOperator<Double> uo2 = s -> s + 10;
         //codes.replaceAll(uo); // tuka compiler error
         codes.replaceAll(uo2); // 20 30
         codes.forEach(System.out::println);
+
+//        List<Double> codes = Arrays.asList(10.0, 20.0);
+//        UnaryOperator<Integer> uo = s -> s + 10.0;
+//        // taka si bese, zznaci compiler error
+//        UnaryOperator<Integer> uo2 = s -> s + 10;
+//        //codes.replaceAll(uo); // tuka compiler error
+//        codes.replaceAll(uo2); // 20 30
+//        codes.forEach(System.out::println);
     }
 
     private static void question147() {
