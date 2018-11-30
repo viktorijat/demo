@@ -1,4 +1,4 @@
-package demo2.plain_java;
+package demo2.vehicle;
 
 import java.util.Set;
 import java.util.TreeSet;

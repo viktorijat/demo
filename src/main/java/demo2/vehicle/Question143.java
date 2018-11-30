@@ -1,4 +1,4 @@
-package demo2.exceptions;
+package demo2.vehicle;
 
 class FuelNotAvailException extends Exception {}
 

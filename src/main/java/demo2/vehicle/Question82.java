@@ -1,4 +1,4 @@
-package demo2.plain_java;
+package demo2.vehicle;
 
 class Vehicle82 {
     int distance; //line n1

@@ -1,6 +1,6 @@
-package demo2.plain_java;
+package demo2.vehicle;
 
-class Vehicle2 {
+class Vehicle4 {
 
     String name;
 
@@ -15,6 +15,6 @@ class Vehicle2 {
 
 public class Question115 {
 
-    // Which action encapsulates the Vehicle class?
-    // A. Make the Vehicle class public.
+    // Which action encapsulates the Vehicle4 class?
+    // A. Make the Vehicle4 class public.
 }

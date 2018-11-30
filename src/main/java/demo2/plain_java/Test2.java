@@ -7,7 +7,7 @@ public class Test2 {
 
     public static void main(String[] args) {
         //question77();
-        //question76("90");
+        question76("91");
         //question75();
         //question74();
         //question73();
@@ -18,10 +18,10 @@ public class Test2 {
 
         //question66();
 
-        //String[] arg2 = {"TRUE", "null"};
-        //questions65(arg2);
+//        String[] arg2 = {"TRUE", "null"};
+//        questions65(arg2);
 
-        question59();
+        //question59();
 
     }
 
@@ -60,6 +60,8 @@ public class Test2 {
     private static void questions65(String[] args) {
         boolean a = new Boolean(Boolean.valueOf(args[0]));
         boolean b = new Boolean(args[1]);
+        Boolean c = new Boolean(null);
+        System.out.println(c);
         System.out.println(a + " " + b);
 
         //true false
@@ -127,39 +129,44 @@ public class Test2 {
     }
 
     private static void question76(String argument) {
-        double discount1 = 0;
-        double discount2 = 0;
-        double discount3 = 0;
-        double discount4 = 0;
-        double discount5 = 0;
         int qty = Integer.parseInt(argument);
         //line n1
+        // pogolemo ili ednakvo so 90 -> 0.5
+        // megju 80 i 90 -> 0.2
 
-//        discount5 = (qty >= 90) ? 0.5 : 0.2;
-//        discount5 = (qty > 80) ? 0.2 : 0.0;
-//        System.out.println("discount 5 " + discount5);
+//        double discount1 = 0;
+//        discount1 = (qty >= 90) ? 0.5 : 0.2;
+//        discount1 = (qty > 80) ? 0.2 : 0.0;
+//        System.out.println("discount 1 " + discount1);
+//        za 90 -> 0.2
 
-        discount1 = (qty >= 90) ? 0.5 : (qty > 80) ? 0.2 : 0;
-        System.out.println("discount 1 " + discount1);
+        double discount2 = 0;
+        discount2 = (qty >= 90) ? 0.5 : (qty > 80) ? 0.2 : 0;
+        System.out.println("discount 2 " + discount2);
 
-        if (qty >= 90) { discount4 = 0.5; }
-        if (qty > 80 && qty < 90) { discount4 = 0.2; }
-        System.out.println("discount 4 " + discount4);
+        double discount3 = 0;
+        if (qty >= 90) { discount3 = 0.5; }
+        if (qty > 80 && qty < 90) { discount3 = 0.2; }
+        System.out.println("discount 3 " + discount3);
 
-//        discount3 = (qty > 80) ? 0.2 : (qty >= 90) ? 0.5 : 0;
-//        System.out.println("discount 3 " + discount3);
+//        double discount4 = 0;
+//        discount4 = (qty > 80) ? 0.2 : (qty >= 90) ? 0.5 : 0;
+//        System.out.println("discount 4 " + discount4);
+//        za 90 -> 0.2
 
+//        double discount5 = 0;
 //        if (qty > 80 && qty < 90) {
-//            discount2 = 0.2;
+//            discount5 = 0.2;
 //        } else {
-//            discount2 = 0;
+//            discount5 = 0;
 //        }
 //        if (qty >= 90) {
-//            discount2 = 0.5;
+//            discount5 = 0.5;
 //        } else {
-//            discount2 = 0;
+//            discount5 = 0;
 //        }
-//        System.out.println("discount 2 " + discount2);
+//        System.out.println("discount 5 " + discount5);
+//        za 81 -> 0
 
 
     }

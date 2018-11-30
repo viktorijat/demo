@@ -19,11 +19,12 @@ class Sum extends RecursiveAction { // line n1
         int sum = 0;
         if (lstIndex - stIndex <= THRESHOLD_SIZE) {
             for (int i = stIndex; i < lstIndex; i++) {
-                sum += data [i]; }
+                sum += data[i];
+            }
             System.out.println(sum);
         } else {
             new Sum(data, stIndex + THRESHOLD_SIZE, lstIndex).fork();
-            new Sum(data, stIndex, Math.min (lstIndex, stIndex + THRESHOLD_SIZE)).compute();
+            new Sum(data, stIndex, Math.min(lstIndex, stIndex + THRESHOLD_SIZE)).compute();
         }
     }
 }
