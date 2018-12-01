@@ -33,6 +33,11 @@ public class PathsTest {
         Path m3 = m.resolve(m2);
         System.out.println("m3: " + m3); // /c/./d
 
+        Path n = Paths.get("a/../b");
+        Path n2 = Paths.get("c/./d");
+        Path n3 = n.resolve(n2);
+        System.out.println("n3: " + n3); // a/../b/c/./d
+
     }
 
     private static void relativize() {
