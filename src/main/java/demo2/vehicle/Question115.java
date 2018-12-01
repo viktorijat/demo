@@ -2,7 +2,7 @@ package demo2.vehicle;
 
 class Vehicle4 {
 
-    String name;
+    public String name;
 
     String getName() {
         return name;
@@ -16,5 +16,5 @@ class Vehicle4 {
 public class Question115 {
 
     // Which action encapsulates the Vehicle4 class?
-    // A. Make the Vehicle4 class public.
+    // A. make the name variable public
 }
