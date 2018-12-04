@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import java.io.BufferedReader;
+import java.io.DataOutput;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -16,9 +17,12 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.function.UnaryOperator;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.*;
 import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
@@ -35,7 +39,116 @@ public class Testing {
         //test6();
         //test7();
         //test8();
-        test9();
+        //test9();
+        //test47();
+        //test48();
+        //test55();
+        //test75();
+        //test78();
+        //test79();
+        //test80();
+        //test81();
+        test84();
+    }
+
+    private static void test84() {
+
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+
+        String s = "Help";
+
+        Future<String> future1 = executor.submit(() -> s + 5);
+        Future<String> future2 = executor.submit(() -> s + 7);
+        Future<String> future3 = executor.submit(() -> s + 2);
+
+        try {
+            System.out.println(future3.get());
+            System.out.println(future1.get());
+            System.out.println(future2.get());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        executor.shutdown();
+    }
+
+    private static void test81() {
+
+        List<Integer> numbers = Arrays.asList(0, 1, 3, 9, 2, 4, 5, 11);
+
+        Predicate<Integer> p = e -> {
+            if (e > 3) return true;
+            else return false;
+        };
+
+        Map<Boolean, List<Integer>> map = numbers.stream().collect(Collectors.partitioningBy(p));
+
+        map.keySet().forEach(o -> {
+            map.get(o).forEach(e -> System.out.print(e));
+            System.out.println(" ");
+        });
+    }
+
+    private static void test80() {
+
+        List<?> list =  Arrays.asList(5, "AAA", 1, "BBB", "CCC");
+        //list.stream().sorted(Integer::compareTo).forEach(s -> System.out.println(s));
+    }
+
+    private static void test79() {
+        List<Integer> list = Arrays.asList(1, 2, 1, 3, 1);
+
+        AtomicInteger count1 = new AtomicInteger();
+        AtomicInteger count2 = new AtomicInteger();
+
+        Consumer<Integer> f1 = (n) -> count1.addAndGet(n);
+        Consumer<Integer> f2 = (n) -> {if (n < 2) count2.addAndGet(n);};
+
+        list.stream().peek(f2).peek(f1);
+
+        System.out.println(count1.get());
+        System.out.println(count2.get());
+
+    }
+
+    private static void test78() {
+        ToDoubleBiFunction<Integer, Integer> f = (x, y) -> x + y;
+        //ToLongBiFunction<Double, Double> f2 = (x, y) -> x + y;
+        ToIntBiFunction<Long, Long> f3 = (x, y) -> 0;
+        //ToDoubleBiFunction<Double, Double> f4 = (x, y) -> "A";
+        ToDoubleBiFunction<String, String> f4 = (x, y) -> 10.1;
+
+    }
+
+    private static void test75() {
+        List<String> list = Arrays.asList("a", "b");
+        Function<String, Stream<String>> f = s -> Stream.of(s + "e", s + "f");
+        list.stream().flatMap(f).forEach(s -> System.out.print(s + " "));
+    }
+
+    private static void test55() {
+        LongUnaryOperator lou = l -> l*2;
+        long l = lou.compose(lou).applyAsLong(3);
+        System.out.println(l);
+    }
+
+    private static void test48() {
+
+        //LongFunction<String> f1 = (e) -> e.lenght() + 5L; nema lenght
+        //IntConsumer<String> f2 = (e) -> System.out.println(e); nema argumenti
+        DoublePredicate p = e -> e > 0.3;
+        BooleanSupplier s = () -> false;
+        //DoubleToLongFunction f = e -> 0.0;
+    }
+
+    private static void test47() {
+
+        Consumer<String> c = s -> {
+            if (s.startsWith("F")) {
+                System.out.println(s);
+            }
+        };
+
+        c.andThen(s -> System.out.println(s + "1")).andThen(s -> System.out.println(s + "2")).accept("Frank");
     }
 
     private static void test9() {

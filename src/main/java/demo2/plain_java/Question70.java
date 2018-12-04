@@ -12,7 +12,7 @@ public class Question70 {
             h = 4;
             p = 0.5;
         }
-//        area = p * b * h; // line n2 not initialized
+        //area = p * b * h; // line n2 not initialized
 //        System.out.println("Area is: " + area);
     }
 }

@@ -2,10 +2,7 @@ package com.example.demo;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.time.Duration;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
+import java.time.*;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -131,6 +128,20 @@ public class Color {
         LocalDateTime dateTime = LocalDateTime.of(date, time);
         Duration d = Duration.of(1, ChronoUnit.WEEKS);
         System.out.println(dateTime.plus(d));
+
+
+        LocalDateTime ldt1 = LocalDateTime.now();
+        LocalDateTime ldt2 = LocalDateTime.of(2016, Month.JUNE, 30, 0, 0);
+        LocalDateTime ldt3 = LocalDateTime.of(2016, 6, 30, 0, 0);
+        //LocalDateTime ldt4 = LocalDateTime.of(2016, 6, 30);
+
+        LocalTime lt = LocalTime.MAX;
+        LocalTime lt2 = LocalTime.of(10, 0);
+        //LocalTime lt3 = (LocalTime) LocalDateTime.of(2016, 6, 1, 11, 0);
+        //LocalTime lt4 = LocalTime.now(new Clock() {});
+        //LocalTime lt5 = LocalTime.from(Instant.now()); // exception
+        LocalTime lt6 = LocalTime.from(LocalDateTime.MAX);
+
     }
 
     private static void test4() throws ExecutionException, InterruptedException {

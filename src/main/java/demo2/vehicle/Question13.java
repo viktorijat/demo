@@ -1,19 +1,19 @@
-package demo2;
+package demo2.vehicle;
 
-class Vehicle {
+class Vehicle3 {
     int x;
 
-    Vehicle() {
+    Vehicle3() {
         this(10);
     }
 
-    Vehicle(int x) {
+    Vehicle3(int x) {
         this.x =  x;
     }
 
 }
 
-public class Question13 extends Vehicle {
+public class Question13 extends Vehicle3 {
     int y;
 
     Question13() {
@@ -31,7 +31,7 @@ public class Question13 extends Vehicle {
     }
 
     public static void main(String[] args) {
-        Vehicle y = new Question13();
+        Vehicle3 y = new Question13();
         System.out.println(y);
     }
 }
