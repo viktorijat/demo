@@ -5,8 +5,6 @@ import java.util.List;
 
 public class BinaryGap {
 
-
-
     private static Integer solution(Integer number) {
 
         String binaryNumber = Integer.toBinaryString(number);
