@@ -2,6 +2,7 @@ package demo2.functional_interfaces;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Locale;
 import java.util.function.*;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -11,11 +12,11 @@ public class Test {
     public static void main(String[] args) {
 
         //question147();
-        question149();
+        //question149();
         //question134();
         //question126();
         //question122();
-        //question121();
+        question121();
         //question118();
         //question92();
         //question84();
@@ -66,7 +67,7 @@ public class Test {
             return result;
         };
 
-        //str.stream().filter(test).findFirst().isPresent(System.out::print);
+        str.stream().filter(test).findFirst().ifPresent(System.out::print);
 
         // compilation error occurs
     }
@@ -113,14 +114,17 @@ public class Test {
     }
 
     private static void question147() {
-        //BiFunction<Integer, Double, Integer> val = (t1, t2) -> t1 + t2; //line n1 compiler error double - integer
+        BiFunction<Integer, Double, Double> val = (t1, t2) -> t1 + t2; //line n1 compiler error double - integer
+
+        new Locale("ru", "RU");
+        new Locale(Locale.FRENCH.getLanguage(), Locale.FRANCE.getCountry());
 
     }
 
     private static void question149() {
 
-        UnaryOperator<Integer> uo1 = s -> s * 2; // line n1
         List<Double> loanValues = Arrays.asList(1000.0, 2000.0);
+        UnaryOperator<Integer> uo1 = s -> s * 2; // line n1
         loanValues.stream()
                 .filter(lv -> lv >= 1500)
                 //.map(lv -> uo1.apply(lv)) // compiler error
