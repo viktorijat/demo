@@ -9,7 +9,10 @@ import java.util.stream.IntStream;
 public class CommonPrimeDivisors {
 
     private static boolean isPrime(int number) {
-        for (int i = 2; i < number; i++) {
+        if (number == 1) {
+            return true;
+        }
+        for (int i = 2; i <= number; i++) {
             if (number % i == 0) {
                 return false;
             }
@@ -39,7 +42,7 @@ public class CommonPrimeDivisors {
 
     public static void main(String[] args) {
 
-        System.out.println(solution(new int[]{15, 10, 3}, new int[]{75, 30, 5}));
+        System.out.println(solution(new int[]{1}, new int[]{1}));
     }
 
 
