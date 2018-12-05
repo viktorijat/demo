@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Rotation {
+public class CyclicRotation {
 
     public static int[] solution(int[] A, int K) {
 
