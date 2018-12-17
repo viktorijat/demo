@@ -49,7 +49,6 @@ class LinkedListLL {
             currNode = currNode.next;
         }
     }
-
 }
 
 public class LinkedListRemoveZeros {
