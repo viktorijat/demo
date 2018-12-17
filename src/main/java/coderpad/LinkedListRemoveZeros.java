@@ -4,49 +4,91 @@ class LinkedListLL {
 
     NodeLL head; // head of list
 
-    /* Linked list Node*/
-    class NodeLL {
-        int data;
-        NodeLL next;
+    LinkedListLL insert(LinkedListLL list, int data) {
 
-        // Constructor to create a new node
-        // Next is by default initialized
-        // as null
-        NodeLL(int d) { data = d; }
-    }
-
-    public LinkedListLL insert(LinkedListLL list, int data) {
-
-        // Create a new node with given data
         NodeLL newNode = new NodeLL(data);
         newNode.next = null;
 
-        // If the Linked List is empty,
-        // then make the new node as head
-        if (list.head == null) {
+        if (list.head == null) { // If the Linked List is empty, then make the new node as head
             list.head = newNode;
-        }
-        else {
-            // Else traverse till the last node
-            // and insert the newNode there
+        } else {
             NodeLL last = list.head;
-            while (last.next != null) {
+            while (last.next != null) { // Else traverse till the last node and insert the newNode there
                 last = last.next;
             }
-
-            // Insert the newNode at last node
-            last.next = newNode;
+            last.next = newNode; // Insert the newNode at last node
         }
-
-        // Return the list by head
-        return list;
+        return list; // Return the list by head
     }
 
-    public void printList(LinkedListLL list) {
+    void printList(LinkedListLL list) {
         NodeLL currNode = list.head;
         while (currNode != null) {
             System.out.print(currNode.data + " ");
             currNode = currNode.next;
+        }
+    }
+
+    private void removeNode(NodeLL previous, NodeLL currNode) {
+
+        if (previous == null) {
+            previous = currNode;
+        } else if (currNode == null) {
+            previous.next = null;
+        } else {
+            previous.next = currNode.next;
+        }
+
+    }
+
+    LinkedListLL removeSumZeros(LinkedListLL list) {
+
+        NodeLL currNode = list.head;
+        NodeLL prevToTheCurrent = null;
+        while (currNode != null) {
+
+
+            NodeLL nextNode = currNode.next;
+            NodeLL prevToTheNext = currNode;
+            while (nextNode != null) {
+                if (currNode.data + nextNode.data == 0) {
+
+
+                    NodeLL currentTemp = nextNode.next;
+                    list.removeNode(prevToTheNext, nextNode);
+                    nextNode = currentTemp;
+
+
+                    NodeLL temp = currNode.next;
+                    NodeLL tempPrevToTheCurrent = currentTemp;
+                    list.removeNode(prevToTheCurrent, currNode);
+                    currNode = temp;
+                    prevToTheCurrent = tempPrevToTheCurrent;
+                } else {
+                    prevToTheNext = nextNode;
+                    nextNode = nextNode.next;
+                }
+
+            }
+            prevToTheCurrent = currNode;
+            currNode = currNode.next;
+        }
+
+        return list;
+    }
+
+    class NodeLL {
+
+        int data;
+        NodeLL next;
+
+        NodeLL(int d) { // Constructor to create a new node, Next is by default initialized as null
+            data = d;
+        }
+
+        @Override
+        public String toString() {
+            return String.valueOf(data);
         }
     }
 }
@@ -65,6 +107,10 @@ public class LinkedListRemoveZeros {
 
         list.printList(list);
 
+        list.removeSumZeros(list);
+        System.out.println("\n");
+
+        list.printList(list);
     }
 
 
