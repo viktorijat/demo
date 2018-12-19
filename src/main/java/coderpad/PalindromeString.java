@@ -20,3 +20,6 @@ public class PalindromeString {
         System.out.println(isPalindrome("abcgcba"));
     }
 }
+
+
+// https://dzone.com/articles/java-memory-management
