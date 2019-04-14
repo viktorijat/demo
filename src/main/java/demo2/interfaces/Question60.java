@@ -2,7 +2,20 @@ package demo2.interfaces;
 
 
 interface Exportable {
+
+    int a = 1;
+
     void export();
+
+    static void export2() {
+
+    }
+}
+
+abstract class AbsA {
+
+    public static final int a = 1;
+    int b;
 }
 
 class Tool implements Exportable {
